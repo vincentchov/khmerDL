@@ -1,12 +1,10 @@
-"""
-    This script is intended to parse Phumi Khmer pages.
-"""
 from __future__ import unicode_literals
 import youtube_dl
 import requests
 import html
 from bs4 import BeautifulSoup
 import re
+import json
 
 """
     Returns a list of URLs to download given the URL for a show
@@ -45,4 +43,4 @@ def phumiKhmerURLs(show_url):
 
 # Get the HTML for the Phumi Khmer page
 url = 'http://www.phumikhmer9.com/2016/09/lbech-sne-meayea.html'
-print(str(phumiKhmer(url)))
+print(str(phumiKhmerURLs(url)))
