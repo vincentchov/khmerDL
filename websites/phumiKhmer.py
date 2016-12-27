@@ -40,7 +40,3 @@ def phumiKhmerURLs(show_url):
         urls.append(episode_url)
 
     return urls
-
-# Get the HTML for the Phumi Khmer page
-url = 'http://www.phumikhmer9.com/2016/09/lbech-sne-meayea.html'
-print(str(phumiKhmerURLs(url)))
