@@ -3,7 +3,6 @@ import youtube_dl
 import sys, re
 from websites.phumiKhmer import phumiKhmerURLs
 
-
 ACCEPTED_SITE_REGEXES = [
     ".*(phumikhmer9.com).*"
 ]
@@ -23,4 +22,16 @@ else:
 
 # If you made it this far, all the URLs are valid
 # So far it will be hard-coded to just download from PhumiKhmer.
-# for url in sys.arg[1:]:
+
+# Put all the URLs to download in one list
+urlsToDL = []
+for url in sys.argv[1:]:
+    urlsToDL += getPhumiKhmerURLs(url)
+
+print("URLS to download" + str(urlsToDL))
+
+# Now download them
+ydl_opts = {}
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    for url in urlsToDL:
+        ydl.download([url])
