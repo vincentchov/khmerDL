@@ -1,12 +1,14 @@
-import sys
+from __future__ import unicode_literals
+import youtube_dl
+import sys, re
 from websites.phumiKhmer import phumiKhmerURLs
 
 
 ACCEPTED_SITE_REGEXES = [
-    "(.*).(phumikhmer9\.com).*"
+    ".*(phumikhmer9.com).*"
 ]
 
-if len(sys.argv == 1):
+if len(sys.argv) == 1:
     print("khmerDL.py must be called with a URL argument. Exiting.")
     sys.exit()
 else:
@@ -15,10 +17,10 @@ else:
         combined = "(" + ")|(".join(ACCEPTED_SITE_REGEXES) + ")"
 
         # If any one of the URLs don't match any of our URLs, quit
-        if !re.match(combined, url):
+        if re.match(combined, url) == None:
             print("One of the URLs provided isn't currently supported. Exiting.")
             sys.exit()
 
 # If you made it this far, all the URLs are valid
 # So far it will be hard-coded to just download from PhumiKhmer.
-for url in sys.arg[1:]:
+# for url in sys.arg[1:]:
