@@ -10,7 +10,7 @@ import json
     Returns a list of URLs to download given the URL for a show
 """
 
-def phumiKhmerURLs(show_url):
+def getPhumiKhmerURLs(show_url):
     # Get the HTML page for a given show's URL
     r = requests.get(show_url)
 
