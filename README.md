@@ -2,8 +2,7 @@
 This is the GitHub repository for KhmerDL, an app that helps you download videos from Khmer sites, with the help of youtube-dl.
 
 ## Setup
-This project assumes the user will run the Django server on localhost:8000 on a
-Debian-based Linux distro.  If you are using Windows 10, you can enable "Bash on Ubuntu on Windows" to setup an Ubuntu environment.  We also assume you use Python 3.4.
+This project assumes the user will run the app on a Debian-based Linux distro.  If you are using Windows 10, you can enable "Bash on Ubuntu on Windows" to setup an Ubuntu environment.  We also assume you use Python 3.4.
 
 Add ```alias python='python3.4'``` to your .bashrc
 
