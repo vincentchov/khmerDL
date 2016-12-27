@@ -4,6 +4,7 @@ This is the GitHub repository for KhmerDL, an app that helps you download videos
 ## Setup
 This project assumes the user will run the Django server on localhost:8000 on a
 Debian-based Linux distro.  If you are using Windows 10, you can enable "Bash on Ubuntu on Windows" to setup an Ubuntu environment.  We also assume you use Python 3.4.
+
 Add ```alias python='python3.4'``` to your .bashrc
 
 In Terminal, install the following dependencies using apt-get:
@@ -28,4 +29,4 @@ env/bin/pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-To run the app, type in python khmerDL.py [URL of show page].
+To run the app, type in ```python khmerDL.py [URL of show page]```.
